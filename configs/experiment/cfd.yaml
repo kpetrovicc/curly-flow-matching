@@ -1,0 +1,31 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /model: curlycfd      # Change to the specific model config you want
+  - override /data: cfd
+  - override /logger: wandb
+
+tags: ["cfd", "exp1"]
+
+# # Specific model hyperparameters for this experiment
+model:
+    net: 
+        dim: 2
+    geodesic_net:
+        dim: 4
+        out_dim: 2
+    sigma: 0.01
+    alpha: 0.01
+    k: 20
+    num_times: 1
+
+# Data module-specific configs for this experiment
+data:
+  data_dir: /slurm-storage/vigmor/InteractingFlows/data/CFD
+  batch_size: 256
+  desired_num_particles: 2000
+  seed: 42
+  dataset_name: "2DTGV"

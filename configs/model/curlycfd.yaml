@@ -1,0 +1,35 @@
+_target_: src.models.curlycfd_module.CurlyCFDModule
+
+geo_model:
+  _target_: src.models.components.resnet.ResNetMLP
+  dim: 4 
+  out_dim: 2
+  time_varying: true
+  width: 256
+
+vel_model:
+  _target_: src.models.components.resnet.ResNetMLP
+  dim: 2 
+  out_dim: 2
+  time_varying: true
+  width: 256
+
+score_model:
+  _target_: src.models.components.resnet.ResNetMLP
+  dim: 2 
+  out_dim: 2
+  time_varying: true
+  width: 256
+
+sigma: 0.1
+
+k: 20
+
+n_times: 1
+
+alpha: 1.0
+
+# compile model for faster training with pytorch 2.0
+compile: false
+
+num_times: 1

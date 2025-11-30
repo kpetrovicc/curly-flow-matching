@@ -1,0 +1,25 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /model: deepcycle      # Change to the specific model config you want
+  - override /logger: wandb
+
+tags: ["deepcycle10", "exp1"]
+
+# # Specific model hyperparameters for this experiment
+model:
+    net: 
+        dim: 10
+    geodesic_net:
+        dim: 20
+        out_dim: 10
+    sigma: 0.01
+    alpha: 0.01
+
+# Data module-specific configs for this experiment
+data:
+  adata_path: /slurm-storage/katpet/InteractingFlows/data/DeepCycle/fibroblast_velocity.h5ad
+  hvgs: 10

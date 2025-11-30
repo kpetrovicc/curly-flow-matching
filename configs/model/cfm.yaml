@@ -1,0 +1,21 @@
+_target_: src.models.cfm_module.CFMModule
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+net:
+  _target_: src.models.components.mlp.MLP
+  dim: 20
+  time_varying: true
+
+geodesic_net:
+  _target_: src.models.components.mlp.MLP
+  dim: 40
+  out_dim: 20
+  time_varying: true
+
+# compile model for faster training with pytorch 2.0
+compile: false

@@ -1,0 +1,36 @@
+_target_: src.models.trajectorynet_module.TrajectoryNetModule
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+net:
+  _target_: src.models.components.mlp.MLP
+  dim: 10
+  time_varying: true
+
+geodesic_net:
+  _target_: src.models.components.mlp.MLP
+  dim: 20
+  out_dim: 10
+  time_varying: true
+
+augmentations:
+  _target_: src.models.components.augmentation.AugmentationModule
+  ut: null
+  cnf_estimator: "exact"
+  l1_reg: 0.
+  l2_reg: 0.
+  squared_l2_reg: 1e-4
+  squared_l2_vector_reg: 1e-4
+  jacobian_frobenius_reg: 1e-4
+  jacobian_diag_frobenius_reg: 0.
+  jacobian_off_diag_frobenius_reg: 0.
+
+# Set to integer if want to train with left out timepoint
+leaveout_timepoint: -1
+
+# compile model for faster training with pytorch 2.0
+compile: false

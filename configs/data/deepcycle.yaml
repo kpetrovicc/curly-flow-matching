@@ -1,0 +1,9 @@
+_target_: src.data.deepcycle_datamodule.DeepCycleDataModule
+
+data_dir: ${paths.data_dir}
+train_val_test_split: [0.8, 0.1, 0.1]
+hvgs: 10
+batch_size: 256
+num_workers: 0
+pin_memory: False
+seed: 42

@@ -48,13 +48,12 @@ K. Petrovic*, L. Atanackovic, V. Moro, K. Kapuśniak, İ. Ceylan, M. Bronstein, 
 </summary>
 
 ```bibtex
-@inproceedings{
-petrovic2025curly,
-title={Curly Flow Matching for Learning Non-gradient Field Dynamics},
-author={Katarina Petrovi{\'c} and Lazar Atanackovic and Viggo Moro and Kacper Kapu{\'s}niak and Ismail Ilkan Ceylan and Michael M. Bronstein and Joey Bose and Alexander Tong},
-booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
-year={2025},
-url={https://openreview.net/forum?id=7cqKVDgFZQ}
+@inproceedings{petrovic2025curly,
+  title={Curly Flow Matching for Learning Non-gradient Field Dynamics},
+  author={Katarina Petrovi{\'c} and Lazar Atanackovic and Viggo Moro and Kacper Kapu{\'s}niak and Ismail Ilkan Ceylan and Michael M. Bronstein and Joey Bose and Alexander Tong},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025},
+  url={https://openreview.net/forum?id=7cqKVDgFZQ}
 }
 ```
 
